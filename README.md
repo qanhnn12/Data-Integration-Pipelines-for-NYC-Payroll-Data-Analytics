@@ -14,6 +14,7 @@ The source data resides in Azure Data Lake and needs to be processed in a NYC da
 </p>  
 In this project, I will use Azure Data Factory to create Data views in Azure SQL DB from the source data files in DataLake Gen2. Then I build the dataflows and pipelines to create payroll aggregated data to be exported to a target directory in DataLake Gen2 storage over which Synapse Analytics external table is built. At a high level, my pipeline will look like below:
 
+<p></p>
 <p align="center">
 <img src="https://video.udacity-data.com/topher/2024/January/65b98a0f_data-integration-pipelines-overview/data-integration-pipelines-overview.jpeg" align="center" >
 <br>
