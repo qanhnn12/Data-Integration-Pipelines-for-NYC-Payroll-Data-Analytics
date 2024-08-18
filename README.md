@@ -5,7 +5,7 @@ The City of New York would like to develop a Data Analytics platform on Azure Sy
 1. Analyze how the City's financial resources are allocated and how much of the City's budget is being devoted to overtime.
 2. Make the data available to the interested public to show how the City’s budget is being spent on salary and overtime pay for all municipal employees.
 
-The source data resides in Azure Data Lake and needs to be processed in a NYC data warehouse. The source datasets consist of CSV files with Employee master data and monthly payroll data entered by various City agencies.
+The source data resides in Azure Data Lake and needs to be processed in a NYC data warehouse. The source datasets consist of [CSV files](https://video.udacity-data.com/topher/2022/May/6283aff5_data-nyc-payroll/data-nyc-payroll.zip) with Employee master data and monthly payroll data entered by various City agencies.
 
 <p align="center">
 <img src="https://video.udacity-data.com/topher/2024/January/65b989ea_nyc-payroll-db-schema/nyc-payroll-db-schema.jpeg" align="center">
