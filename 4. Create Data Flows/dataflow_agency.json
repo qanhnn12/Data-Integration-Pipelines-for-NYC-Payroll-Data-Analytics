@@ -1,0 +1,50 @@
+{
+    "name": "dataflow_agency",
+    "properties": {
+        "type": "MappingDataFlow",
+        "typeProperties": {
+            "sources": [
+                {
+                    "dataset": {
+                        "referenceName": "adls_AgencyMaster",
+                        "type": "DatasetReference"
+                    },
+                    "name": "source1"
+                }
+            ],
+            "sinks": [
+                {
+                    "dataset": {
+                        "referenceName": "sqldb_NYC_Payroll_AGENCY_MD",
+                        "type": "DatasetReference"
+                    },
+                    "name": "sink1"
+                }
+            ],
+            "transformations": [],
+            "scriptLines": [
+                "source(output(",
+                "          AgencyID as string,",
+                "          AgencyName as string",
+                "     ),",
+                "     allowSchemaDrift: true,",
+                "     validateSchema: false,",
+                "     ignoreNoFilesFound: false) ~> source1",
+                "source1 sink(allowSchemaDrift: true,",
+                "     validateSchema: false,",
+                "     input(",
+                "          AgencyID as string,",
+                "          AgencyName as string",
+                "     ),",
+                "     deletable:false,",
+                "     insertable:true,",
+                "     updateable:false,",
+                "     upsertable:false,",
+                "     format: 'table',",
+                "     skipDuplicateMapInputs: true,",
+                "     skipDuplicateMapOutputs: true,",
+                "     errorHandlingOption: 'stopOnFirstError') ~> sink1"
+            ]
+        }
+    }
+}
